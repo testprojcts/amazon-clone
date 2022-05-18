@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon | Authenticate</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <!-- Sign Up Form -->
+    <div class="container" id="signup_form">
+      <a href="/index.html" class="home__link">Amazon</a>
+      <div class="form__container" id="signup">
+        <div class="form__hd">
+          <h3>Sign Up to Amazon</h3>
+        </div>
+        <form validate autocomplete="on">
+          <input
+            type="email"
+            name="email"
+            class="auth__input"
+            id="signup_email"
+            required
+            placeholder="Enter valid email"
+          />
+          <input
+            type="password"
+            name="password"
+            class="auth__input"
+            id="signup_password"
+            required
+            placeholder="Enter password"
+          />
+          <input
+            type="password"
+            name="password"
+            class="auth__input"
+            id="signup_confirm_password"
+            required
+            placeholder="Confirm password"
+          />
+          <div class="submit">
+            <button type="submit" id="signup_submit__btn">Sign Up</button>
+          </div>
+          <div class="forgotten-psd">
+            <span
+              >Already have an account?
+              <a href="/signin.html" id="signIn__link">Sign in here</a></span
+            >
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/firebase-config.js" type="module"></script>
+    <script src="/main.js" type="module"></script>
+  </body>
+</html>

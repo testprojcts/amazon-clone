@@ -1,0 +1,464 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --amazon-header-bg: #000;
+  --amazon-txt-color: #fff;
+  --amazon-card-bg: #eee;
+  --amazon-app-bg: rgba(238, 238, 238, 0.74);
+
+  --amazon-sub-header-bg: rgb(39, 42, 43);
+}
+
+body {
+  background-color: var(--amazon-app-bg);
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  gap: 20px;
+  background-color: var(--amazon-header-bg);
+  top: 0;
+  left: 0;
+  position: sticky;
+  z-index: 9;
+}
+
+header>.brand {
+  padding: 0 10px;
+}
+
+.brand>a {
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+}
+
+
+
+/* Seacrch Box Container */
+header>.search__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.search__container>.options>select {
+  width: 55px;
+  height: 40px;
+  cursor: pointer;
+  text-align: left;
+}
+
+select.default {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  border: 0;
+  outline: 0;
+  padding: 3px 6px;
+  background-color: rgba(221, 221, 221, 0.925);
+}
+
+select>.dropdown__options {
+  background-color: #fff;
+}
+
+.search__container>form {
+  width: 100%;
+  /* flex: 1; */
+}
+
+form>#searchbox {
+  /* flex: 1; */
+  width: 93%;
+  max-width: 100%;
+  border: 0;
+  outline: 0;
+  height: 40px;
+  gap: 0;
+  padding: 0 10px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+form>input::-webkit-search-cancel-button {
+  display: none;
+}
+
+form>.search__btn {
+  height: 40px;
+  border: 0;
+  outline: 0;
+  padding: 3px 6px;
+  border-top-right-radius: 5px;
+  margin-left: -10px;
+  border-bottom-right-radius: 5px;
+  background-color: rgb(255, 166, 0);
+  color: black;
+  cursor: pointer;
+}
+
+
+
+/* Side Navs */
+header>.side__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 420px;
+  padding: 0 20px;
+}
+
+.side__nav>.link__options {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.link__options>a {
+  color: white;
+}
+
+.link__options>.link:hover {
+  color: orange;
+}
+
+.link__options>a>p {
+  font-size: 13px;
+  color: whitesmoke;
+}
+
+.link__options>a>b {
+  font-size: 13.5px;
+}
+
+
+/* Sub Header */
+.sub__header {
+  width: 100%;
+  padding: 0 25px;
+  height: 40px;
+  background-color: var(--amazon-sub-header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.sub__header>a {
+  color: white;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.sub__header>a:hover {
+  color: orange;
+}
+
+.sub__header>button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  color: white;
+}
+
+
+/* BANNER */
+.banner {
+  width: 100%;
+  height: 100%;
+}
+
+.banner>img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mask-image: linear-gradient(transparent, var(--amazon-app-bg));
+}
+
+
+/* PRODUCT CARDS */
+.product__cards {
+  width: 100%;
+  margin-top: -350px;
+  background: transparent;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 30px;
+  height: 100%;
+  background-blend-mode: lighten;
+}
+
+.card {
+  background-color: var(--amazon-txt-color);
+  padding: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 10px;
+  height: 380px;
+  overflow: hidden;
+  /* border-radius: 3px; */
+}
+
+.card>.card__title {
+  width: 100%;
+}
+
+.card__title>h3 {
+  font-size: 20px;
+  font-weight: 550;
+  text-transform: capitalize;
+}
+
+.card>.card__img {
+  width: 100%;
+  height: 260px;
+}
+
+.card__img>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card>.card__link {
+  width: 100%;
+}
+
+.card__link>a {
+  font-size: 14px;
+  color: dodgerblue;
+}
+
+.card__link>a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.card.auth__wrapper {
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+}
+
+.card.card.auth__wrapper>.auth__card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--amazon-txt-color);
+  padding: 15px 25px;
+  gap: 15px;
+}
+
+.auth__card>a {
+  padding: 7px 10px;
+  text-align: center;
+  background-color: orange;
+  color: black;
+  width: 100%;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.auth__card>a:hover,
+.auth__card>a:active {
+  background-color: rgb(228, 150, 5);
+}
+
+.card.auth__wrapper>.auth__card--img {
+  width: 100%;
+  height: inherit;
+}
+
+.card__img:hover,
+.card.auth__wrapper>.auth__card--img:hover {
+  cursor: pointer;
+}
+
+.auth__card--img>img {
+  width: 100%;
+}
+
+
+/* Scrollable Cards */
+.card__scroll {
+  width: 100%;
+  /* background-color: red; */
+  height: 100%;
+  padding: 0px 30px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.card__scroll>.card__scroll--img-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  gap: 10px;
+  padding: 20px 30px;
+  background-color: var(--amazon-txt-color);
+  scroll-snap-type: mandatory x;
+  scroll-behavior: smooth;
+  height: 250px;
+  /* background-color: red */
+}
+
+.card__scroll--img-container::-webkit-scrollbar {
+  display: none;
+}
+
+.reverse1, .reverse3 {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+
+.card__scroll--img-container > img{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.card__scroll--img-container:hover ::-webkit-scrollbar{
+  display: block;
+}
+
+
+/* Auth */
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 100px;
+}
+
+.container > .home__link {
+  font-size: 30px;
+  color: black;
+  font-weight: 600;
+}
+
+.container > .form__container {
+  width: 370px;
+  background-color: #fff;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  padding: 35px 20px;
+  box-shadow: 0px 1px 15px 5px rgba(221, 221, 221, 0.774);
+  border-radius: 5px;
+}
+
+.form__container > .form__hd {
+  width: 100%;
+  text-align: center;
+}
+
+.form__hd > h3 {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.829);
+}
+
+.form__container > form {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+form > .auth__input{
+  width: 100%;
+  background-color: rgba(221, 221, 221, 0.466);
+  border-radius: 3px;
+  height: 40px;
+  font-size: 14px;
+  padding: 0 10px;
+  border: 0;
+  outline: 0;
+}
+
+form>input::placeholder{
+  font-size: 14px;
+}
+
+form > .forgotten-psd {
+  width: 100%;
+}
+
+.forgotten-psd>span {
+  font-size: 13px;
+}
+
+.forgotten-psd > span > a {
+  margin-top: -10px;
+  font-size: 13px;
+  color: black;
+  transition: all 0.2s ease;
+}
+
+.forgotten-psd>span>a:hover{
+  text-decoration: underline;
+  color: orange;
+}
+
+form > .submit {
+  width: 100%;
+}
+
+.submit > button {
+  width: 100%;
+  background-color: orange;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  padding: 11px 20px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 550;
+}
+
+.submit > button:hover,
+.submit > button:active {
+  background-color: rgb(228, 150, 5);
+}
